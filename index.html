@@ -7,7 +7,14 @@
     <title>Michael Tsai Photography</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,16 +24,59 @@
     <![endif]-->
   </head>
   <body>
-        <div class="container">
-            <div class="row">
+        <div id="headerdiv" class="container text-center">
+            <div id="titlediv" class="row">
+                <div class="col-md-12">
+                Michael Tsai Photography
+                </div>
+            </div>
+            <div id="navdiv" class="row">
                 <div class="col-md-6">About</div>
                 <div class="col-md-6">Contact</div>
             </div>
         </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+ 
+        <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="pic/1.jpg" alt="Japan Garden">
+                    <div class="carousel-caption">
+                        <h3>Japanese Garden</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="pic/2.jpg" alt="Osaka Castle">
+                    <div class="carousel-caption">
+                        <h3>Osaka Castle</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="pic/3.jpg" alt="Corgi">
+                    <div class="carousel-caption">
+                        <h3>Corgi</h3>
+                    </div>
+                </div>
+            </div>
+ 
+        <!-- Controls -->
+            <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div> 
   </body>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </html>
 
