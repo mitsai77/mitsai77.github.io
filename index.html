@@ -7,6 +7,11 @@
     <title>Michael Tsai Photography</title>
 
     <!-- Bootstrap -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/myscript.js"></script>
+
     <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -27,16 +32,16 @@
         <div id="headerdiv" class="container text-center">
             <div id="titlediv" class="row">
                 <div class="col-md-12">
-                Michael Tsai Photography
+                    <h1>Michael Tsai Photography</h1>
                 </div>
             </div>
             <div id="navdiv" class="row">
-                <div class="col-md-6">About</div>
-                <div class="col-md-6">Contact</div>
+                <a class="col-md-6" href="about"><h4>About</h4></a>
+                <a class="col-md-6" href="contact"><h4>Contact</h4></a>
             </div>
         </div>
-
-        <div id="carousel" class="carousel slide" data-ride="carousel">
+        <br><hr>
+        <div id="carousel" class="carousel slide container" data-ride="carousel">
         <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -74,9 +79,64 @@
                 <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
         </div> 
+        <br><hr>
+        <div id="about" class="container text-center"> 
+            <div class="row">
+                <h1>About Me</h1>
+                <div class="col-md-6">
+                    <img class="img-rounded img-responsive" src="pic/self.jpg">
+                </div>
+                <div class="col-md-6">
+                    <h6>I'm Joko Ono and I have a great friend</h6>
+                </div>
+            </div>
+        </div>
+        <br><hr>
+        <div id="contact" class="container text-center">
+            <div class="row">
+                <h1>Contact Me</h1>
+                <form class="form-horizontal" role="form" method="post" action="index.php">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="name" name="Name" placeholder= "Full Name" value="<?php echo htmlspecialchars($_POST['name']);?>" />
+                            <?php echo "<p class='text-danger'>$errName</p>";?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" name="Email" placeholder= "example@gmail.com" value="<?php echo htmlspecialchars($_POST['email']);?>">
+
+                            <?php echo "<p class='text-danger'>$errEmail</p>";?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="col-sm-2 control-label">Message</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" rows="4" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+
+                            <?php echo "<p class='text-danger'>$errMessage</p>";?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input id="submit" class= "btn btn-primary" name="submit" type="submit" value="Send"> 
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <?php echo $result;?>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
   </body>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </html>
 
