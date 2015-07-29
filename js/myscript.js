@@ -6,4 +6,9 @@ $('document').ready(function() {
         $('body').animate({scrollTop: $anchor.top});
         return false;
     });
+    $('#navdiv').find('a').hover(function() {
+        $(this).find('i').attr("class", "fa fa-picture-o");
+    }, function() {
+        $(this).find('i').attr("class", "fa fa-camera");
+    });
 });
